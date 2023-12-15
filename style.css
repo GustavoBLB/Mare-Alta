@@ -1,0 +1,487 @@
+:root{
+    --BrancoCremePrincipal: #FFF9D7;
+    --VerdePrincipal: #003C0E;
+    --VerdeSecundario: #125B24;
+    --LarangaPrincipal: orange;
+}
+html{
+    scroll-behavior: smooth;
+    background-color: var(--VerdePrincipal);
+  }
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#menuNavegacao a{
+    text-decoration: none;
+    color: var(--BrancoCremePrincipal);
+    transition: 0.5s;
+    font-family: 'Bellefair';
+}
+ul{
+    display: flex;
+    gap: 50px;
+}
+li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    /* font-family: 'Avenir Next', sans-serif; */
+}
+#menuNavegacao{
+    display: flex;
+    top: -68px;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 68px;
+    background-color: var(--VerdePrincipal);
+    position: fixed;
+    z-index: 2;
+    transition: top 0.8s;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25)
+}
+#menuNavegacao a:hover{
+    color: #c0bca2;
+}
+/* header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 68px;
+    background-color: var(--VerdePrincipal);
+    position: fixed;
+    z-index: 2;
+} */
+.secundarios{
+    font-size: 18px;
+}
+.principal{
+    font-size: 42px;
+}
+.menuNavegacaoConteudoPrincipal{
+    padding-left: 285px;
+    padding-right: 285px;
+}
+.menuNavegacaoConteudo{
+    border-bottom: 0px ;
+
+}
+#primeiraPagina{
+    height: 100vh;
+    width: 100%;
+    background-image: url('restauranteFotoDeFundo.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animacaoPrimeiraPagina 1000ms;
+}
+@keyframes animacaoPrimeiraPagina {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#imagemLogo{
+    width: 700px;
+    height: 700px;
+    margin-bottom: 80px;
+    opacity: 1;
+    animation: animacaoLogo 1000ms;
+}
+@keyframes animacaoLogo {
+    0% {
+        transform: translateY(-0%); 
+      opacity: 0;
+    }
+
+    25% {
+      opacity: 0.25;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    75% {
+      opacity: 0.75;
+    }
+
+    100% {
+        transform: translateY(0); 
+      opacity: 1;
+    }
+}
+
+
+
+
+#segundaPagina{
+    height: 110vh;
+    width: 100%;
+    background-color: #0f4d1e;
+    right: -1000px;
+}
+
+#segundaPaginaTextoTitulo hr{
+    height: 5px;
+    width: 650px;
+    border: none;
+    background-color: var(--LarangaPrincipal);
+}
+#segundaPagina{
+    display: flex; 
+}
+#segundaPaginaTexto{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 26px;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-right: 130px;
+}
+
+#segundaPaginaImagem{
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+    padding-top: 50px;
+    margin-right: 20px;
+}
+.paragrafoSegundaPagina{
+    font-family: 'Bellefair';
+    color: var(--BrancoCremePrincipal);
+    text-indent:20px;
+    text-align:justify;
+}
+
+#titulo{
+    font-size: 70px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    color: var(--BrancoCremePrincipal);
+}
+#imagemSegundaPagina{
+    height: 600px;
+    width: 430px;
+    border-radius: 14px 128px 12px 158px;
+    margin-right: 40px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    transition: 1s;
+}
+
+#imagemSegundaPagina:hover{
+    transform: scale(1.02);
+}
+
+
+
+
+#terceiraPagina{
+    height: 130vh;
+    width: 100%;
+    background-color: rgb(255, 166, 0);
+}
+
+#carrosel{
+    margin: 0 auto;
+    width: 100%;
+    height: 570px;
+    overflow: hidden;
+}
+
+#conteudoCarrosel{
+    display: flex;
+    width: 400%;
+    height: 570px;
+}
+
+#conteudoCarrosel input{
+    display: none;
+}
+
+.carroselImagem{
+    width: 25%;
+    height: 570px;
+    position: relative;
+    transition: 1s;
+}
+
+.carroselImagem img{
+    width: 100%;
+}
+
+#carroselManual, .carroselAuto{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    margin-top: 500px;
+}
+
+
+.botaoManual, .autoBotao{
+    border-radius: 3px;
+    padding: 10px;
+    margin:  0px 10px;  
+    cursor: pointer;
+    transition: 0.4s; 
+}
+
+
+.botaoManual:hover{
+    background-color: white;
+}
+
+#carroselBotao1:checked ~ .carroselAuto .autobotao1{
+    background-color: white;
+    transform: scale(1.3);
+}
+#carroselBotao1:checked ~ .carroselAuto .autobotao2, .carroselAuto .autobotao3 {
+    background-color: rgb(97, 97, 97);
+}
+
+#carroselBotao2:checked ~ .carroselAuto .autobotao2{
+    background-color: white;
+    transform: scale(1.3);
+}
+#carroselBotao2:checked ~ .carroselAuto .autobotao1, .carroselAuto .autobotao3 {
+    background-color: rgb(97, 97, 97);
+}
+
+#carroselBotao3:checked ~ .carroselAuto .autobotao3{
+    background-color: white;
+    transform: scale(1.3);
+}
+#carroselBotao3:checked ~ .carroselAuto .autobotao1, .carroselAuto .autobotao2 {
+    background-color: rgb(97, 97, 97);
+
+}
+
+#carroselBotao1:checked ~ .primeiro{
+    margin-left: 0%;
+
+}
+#carroselBotao2:checked ~ .primeiro{
+    margin-left: -25%;
+
+}
+#carroselBotao3:checked ~ .primeiro{
+    margin-left: -50%;
+
+}
+#quartaPagina{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#cardapioTitulo{
+    color: var(--BrancoCremePrincipal);
+    font-size: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+}
+#quartaPagina hr{
+    margin-top: -16px;
+    margin-bottom: 10px;
+    background-color: var(--BrancoCremePrincipal);
+    border: none;
+    width: 150px;
+    height: 3px;
+}
+#cardapioBotao{
+    color: var(--BrancoCremePrincipal);
+    text-decoration: none;
+    transition: all 300ms ease 0ms;
+    border: 3px solid var(--VerdePrincipal);
+    border-radius: 2px;
+    background-color: var(--VerdePrincipal);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 40px;
+    padding-right: 18px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+#cardapioBotao:hover{
+    background-color: transparent;
+    padding-right: 40px;
+    padding-left: 35px;
+}
+
+#quartaPagina img{
+    width: 15px;
+    opacity: 0;
+    transition: 200ms;
+}
+
+#cardapioBotao:hover img{
+    opacity: 1;
+}
+
+
+
+
+#quintaPagina{
+    display: flex;
+    height: 95vh;
+    background-color: var(--VerdePrimario);
+}
+#quintaPagina span{
+    color: #FFF9D7;
+    font-size: 26px;
+    font-family: Bebas Neue;
+    font-weight: 400;
+
+}
+#quintaPagina h1{
+    color: orange;
+    font-size: 62px;
+    font-family: Bebas Neue;
+    font-weight: 400;
+    margin-top: -10px;
+}
+#quintaPaginaForm{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-top: 40px;
+    padding-left: 160px;
+
+}
+.inputForm{
+    width: 490px;
+    height: 40px;
+    border-radius: 2px;
+    border: none;
+    font-family: Bebas Neue;
+    font-size: 20px;
+    color: #767676;
+    padding-left: 10px;
+}
+.textareaInputForm{
+    padding-top: 8px;
+    width: 490px;
+    min-width: 490px;
+    max-width: 490px;
+    height: 100px;
+    min-height: 100px;
+}
+form{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+form button{
+    background-color: orange;
+    border-radius: 2px;
+    border: 2px solid orange;
+    color: var(--BrancoCremePrincipal);
+    font-family: Bebas Neue;
+    font-weight: 400;
+    font-size: 25px;
+    transition: 400ms;
+    width: 130px;
+    height: 42px;
+}
+form button:hover{
+    background-color: var(--BrancoCremePrincipal);
+    border: 2px solid orange;
+    color: orange;
+
+}
+#formBotao{
+    padding-left: 373px;
+    margin-top: -10px;
+}
+
+
+#quintaPagina img{
+    border-radius: 5px;
+    padding-top: 40px;
+    margin-left: 150px;
+    transition: 1s;
+    width: 380px;
+    height: 500px;
+}
+#quintaPagina img:hover{
+    transform: scale(1.02);
+}
+
+
+
+
+footer{
+    width: 100%;
+    height: 55vh;
+    background-color: #002509;
+}
+#imagemFooter{
+    margin: auto;
+
+    width: 200px;
+
+}
+footer img{
+    width: 200px;
+    height: 200px;
+
+}
+#conteudosFooter{
+    margin: auto;
+    margin-left: 120px;
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    width: 90%; 
+}
+.conteudoFooter{
+    width: 50%;
+}
+#conteudosFooter h1{
+    color: orange;
+    font-family: Bebas Neue;
+    font-weight: 400;
+    margin-bottom: 9px;
+}
+
+#conteudosFooter p{
+    color: var(--BrancoCremePrincipal);
+    font-family: bebas neue;
+}
+
+#footer2{
+    background-color: #001606;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: var(--BrancoCremePrincipal);
+    font-family: Bebas Neue;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+#footer2 a{
+    text-decoration: none;
+    color: #fcf3bf;
+}

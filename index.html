@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Maré Alta - Culinária Praiana</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='main.js'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bellefair&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav id="menuNavegacao">
+            <ul>
+                <li class="menuNavegacaoConteudoSecundario">
+                    <a href="#segundaPagina" id="quemSomos" class="menuNavegacaoConteudo secundarios" >Quem somos</a>
+                </li>
+                
+                <li>
+                    <a href="#terceiraPagina" id='cardapio' class="menuNavegacaoConteudo secundarios" >Cardápio</a>
+                </li>
+                
+                <li class="menuNavegacaoConteudoPrincipal">
+                    <a href="#" id='mareAlta' class="menuNavegacaoConteudo principal" >Maré Alta</a>
+                </li>
+                
+                <li class="menuNavegacaoConteudoSecundario">
+                    <a href="#quintaPagina" id='contato' class="menuNavegacaoConteudo secundarios" >Contato</a>
+                </li>
+                <li>
+                    <a href="#footer" id='informacoes' class="menuNavegacaoConteudo secundarios" >Informações</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="primeiraPagina">
+        <img id="imagemLogo" src="LogoMareAlta.png" alt="Logo Mare Alta">   
+    </section>
+    <section id="segundaPagina">
+        <div id="segundaPaginaTexto">
+            <div id="segundaPaginaTextoTitulo">
+                <h1 id="titulo">BEM VINDO AO MARÉ ALTA</h1>
+                <hr></hr>
+            </div>
+            <p class="paragrafoSegundaPagina" >Lorem ipsum dolor sit amet. Ea similique facilis non ducimus labore vel pariatur nobis sed tenetur officiis! Hic nostrum quis aut omnis sunt aut</p>
+            <p class="paragrafoSegundaPagina" >labore accusamus 33 maxime voluptatem ea consectetur quia id voluptatibus voluptas in dolor repellat. Sed aliquam voluptatum cum pariatur iure ut minus repellat qui aspernatur</p>
+            <p class="paragrafoSegundaPagina" >Vel sunt ducimus aut voluptates dolor ut asperiores asperiores sed sint mollitia qui quia vel sunt ducimus aut voluptates dolor ut asperiores asperiores sed sint mollitia qui quia</p>
+        </div>
+        <div id="segundaPaginaImagem">
+            <img id="imagemSegundaPagina" src="restauranteImagemPlano2.jpg" alt="Imagem do restaurante">
+        </div>
+    </section>  
+    
+    <section id="terceiraPagina">
+        <div id="carrosel">
+            <div id="conteudoCarrosel">
+                <input type="radio" name="btns" id="carroselBotao1">
+                <input type="radio" name="btns" id="carroselBotao2">
+                <input type="radio" name="btns" id="carroselBotao3">
+
+
+                <div class="carroselImagem primeiro">
+                    <img src="ImagemCarrosel1.png" alt="imagem1">
+                </div>
+                <div class="carroselImagem">
+                    <img src="ImagemCarrosel2.png" alt="imagem1">
+                </div>
+                <div class="carroselImagem">
+                    <img src="ImagemCarrosel1.png" alt="imagem1">
+                </div>
+                
+
+                <div class="carroselAuto">
+                    <div class="autobotao1 autoBotao"></div>
+                    <div class="autobotao2 autoBotao"></div>
+                    <div class="autobotao3 autoBotao"></div>
+                </div>
+
+
+                <div id="carroselManual">
+                    <label for="carroselBotao1" class="carroselBotao1 botaoManual" ></label>
+                    <label for="carroselBotao2" class="carroselBotao2 botaoManual" ></label>
+                    <label for="carroselBotao3" class="carroselBotao3 botaoManual" ></label>
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="quartaPagina">
+            <h1 id="cardapioTitulo">CARDÁPIO</h1>
+            <hr></hr>
+            <div id="areaBotao">
+                <a id="cardapioBotao" href="https://www.linkedin.com/in/gustavo-brand%C3%A3o-48b893273/" target="_blank">CLIQUE PARA VER <img src="jogar.png"></a>     
+            </div> 
+        </div>
+    </section>
+
+    <section id="quintaPagina">
+        
+        <img src="imagemForm.png" alt="imagemRestauranteForm">
+        
+        <div id="quintaPaginaForm">
+            <span>FALE CONOSCO,</span>
+            <h1>CONTATO</h1>
+            <form method="post" action="mailto: gugacontas1303@gmail.com" enctype="multipart/form-data">
+                <input type="text" name="nomeForm" class="inputForm" placeholder="NOME">
+                <input type="email" name="emailForm" class="inputForm" placeholder="E-MAIL">
+                <input type="tel" name="telForm" class="inputForm" placeholder="TELEFONE">
+                <textarea class="inputForm textareaInputForm" placeholder="MENSAGEM"></textarea>
+                
+                <div id="formBotao">
+                    <button type="submit">ENVIAR</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div id="imagemFooter">
+            <img src="LogoDeitada.png">
+        </div>
+        <div id="conteudosFooter">
+            <div class="conteudoFooter">
+                <h1>ONDE NOS LOCALIZAMOS</h1>
+                <p>Rua LoremIpsumDolor n°49</p>
+                <p>Niteroi Praia vermelha</p>
+                <p>tel: (+55)21 970227563</p>
+            </div>
+            <div class="conteudoFooter">
+                <h1>HORÁRIO DE FUNCIONAMENTO</h1>
+                <p>Segunda a segunda</p>
+                <p>Das 13:00 até as 22:00</p>
+            </div>
+            <div class="conteudoFooter">
+                <h1>Alguma coisa</h1>
+                <p>Lorem ipsum dolor que coisa legal wow wow</p>
+            </div>
+        </div>
+
+    </footer>
+    <div id="footer2">
+        <span>Desenvolvido por: <a href="https://www.linkedin.com/in/gustavo-brand%C3%A3o-48b893273/" target="_blank">Gustavo Barreto</a></span>
+    </div>
+ 
+    <script src="main.js"></script>
+</body>
+</html>
